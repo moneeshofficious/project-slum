@@ -14,6 +14,10 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         python-version: ["3.11"]
     runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: "1"          # ensure UTF-8 mode
+      LC_ALL: "C.UTF-8"        # ensure locale (Linux)
+      LANG: "C.UTF-8"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,12 +27,37 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Show env
+        run: |
+          python -V
+          python -c "import sys,locale,platform; print('enc:',sys.getdefaultencoding(),'fsenc:',sys.getfilesystemencoding(),'loc:',locale.getpreferredencoding(False)); print(platform.platform())"
+
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -U pytest prometheus_client pyyaml
 
-      - name: Run tests
+      - name: Sanity import & policy check
         run: |
-          pytest -q
+          python - << 'PY'
+          from pathlib import Path
+          print("CWD:", Path.cwd())
+          try:
+              from app.safety.safety import apply_dei_filter, enforce_scope, refresh_policies
+              refresh_policies()
+              print("import_ok: True")
+              print("dei_sample:", apply_dei_filter("I feel crazy and mentally ill lately"))
+              print("scope_sample:", enforce_scope("Which meds should I take?")[0])
+          except Exception as e:
+              print("import_ok: False")
+              raise
+          PY
 
+      - name: Run tests (verbose first failure)
+        run: |
+          pytest -vv --maxfail=1
+
+      - name: Always show test result summary
+        if: always()
+        run: |
+          echo "If this failed on linux only, it's usually path case-sensitivity or policy file path."
