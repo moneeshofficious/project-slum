@@ -1,0 +1,4 @@
+# file: C:\Users\monee\Desktop\Project Slum\app\safety\config.py
+# hypothesis_version: 6.138.8
+
+['(?i)\\bcrazy|insane\\b', '(?i)\\bcrippled\\b', '(?i)\\bdose\\s+of\\b', '(?i)\\bwhat\\s+dose\\b', 'SAFETY_POLICY_PATH', 'block_patterns', 'dei', 'feeling overwhelmed', 'lexicon', 'policies.yaml', 'r', 'redirect_message', 'scope', 'utf-8']

@@ -1,0 +1,21 @@
+﻿scope:
+  block_terms:
+    - diagnose
+    - diagnosis
+    - prescribe
+    - prescription
+    - meds
+    - medication
+  redirect_message: >
+    I can’t help with diagnosis or medications. I can share general education
+    and encourage you to speak with a licensed professional.
+
+dei:
+  rewrites:
+    crazy: "overwhelmed"
+    insane: "very distressed"
+    addict: "person dealing with substance use"
+    schizo: "person living with schizophrenia"
+
+throttle:
+  repeated_risk_seconds: 900  # 15 minutes

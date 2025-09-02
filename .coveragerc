@@ -1,0 +1,6 @@
+# .coveragerc
+# PATCH H (optional): exclude obsolete/unused file from safety coverage
+[run]
+omit =
+    app/safety/guard.py
+

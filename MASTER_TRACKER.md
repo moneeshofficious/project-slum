@@ -1,0 +1,22 @@
+﻿# Master Tracker — Project SLUM (Modules 1–20)
+
+- [ ] Module 1 — Safety & Scope Guard
+- [ ] Module 2 — Personalization
+- [ ] Module 3 — Conversation State Machine
+- [ ] Module 4 — Mate Mode Engine (Coach)
+- [ ] Module 5 — Inner Me Engine (Companion)
+- [ ] Module 6 — Skills Library (Core + Advanced)
+- [ ] Module 7 — Science Notes Engine
+- [ ] Module 8 — Memory Layer
+- [ ] Module 9 — Knowledge & Retrieval Packs (15)
+- [ ] Module 10 — Orchestrator
+- [ ] Module 11 — Frontend UI (Streamlit)
+- [ ] Module 12 — Data Layer
+- [ ] Module 13 — Observability & Reliability
+- [ ] Module 14 — Evaluation & Red-Team
+- [ ] Module 15 — Updates & Learning Loop
+- [ ] Module 16 — Accessibility & Localization
+- [ ] Module 17 — Crisis Hand-offs
+- [ ] Module 18 — Web App (Public)
+- [ ] Module 19 — Security Hardening
+- [ ] Module 20 — Cost & Scale

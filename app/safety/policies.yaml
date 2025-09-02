@@ -1,0 +1,32 @@
+# app/safety/policies.yaml
+version: 1
+
+scope:
+  # Tests look for this exact key:
+  block_patterns:
+    - (?i)\b(diagnos\w*|prescrib\w*|meds?|medication advice|what dose|dosage)\b
+  # Keep also for loader compatibility (harmless duplicate of the same list):
+  patterns:
+    - (?i)\b(diagnos\w*|prescrib\w*|meds?|medication advice|what dose|dosage)\b
+  redirect_message: >
+    I can’t provide diagnosis or medication advice. I can share general education
+    and suggest speaking with a licensed clinician. If you’d like, I can help you
+    prepare questions for your appointment.
+
+dei:
+  lexicon:
+    # The tests expect "feeling overwhelmed" (not just "overwhelmed")
+    "crazy|insane": "feeling overwhelmed"
+    "mentally ill": "living with a mental health condition"
+    "committed suicide": "died by suicide"
+    "addict": "person struggling with substance use"
+    "victim": "survivor"
+
+risk:
+  ambiguous_patterns:
+    - (?i)\b(i'?m done|nothing matters|can[’']?t go on)\b
+
+consent:
+  version: 1
+  text: >
+    By continuing, you agree to non-clinical guidance only. For emergencies, use local services.

@@ -1,0 +1,6 @@
+# ops/rate_limit.sample.yaml
+limits:
+  default:
+    requests_per_minute: 60
+    burst: 30
+notes: "Wire this into FastAPI middleware or proxy (e.g., NGINX rate limiting)."

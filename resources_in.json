@@ -1,0 +1,11 @@
+{
+  "country": "IN",
+  "helplines": [
+    { "name": "Emergency Services", "detail": "Dial 112" },
+    { "name": "Tele MANAS", "detail": "National mental health helpline" },
+    { "name": "KIRAN", "detail": "Mental health support line" },
+    { "name": "AASRA", "detail": "Crisis support" },
+    { "name": "Vandrevala Foundation", "detail": "Mental health helpline" }
+  ],
+  "footer": "If you or someone else may be in danger, call local emergency number (112 in India)."
+}

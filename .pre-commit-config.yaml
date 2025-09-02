@@ -1,0 +1,16 @@
+# .pre-commit-config.yaml
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.5.7
+  hooks:
+    - id: ruff
+    - id: ruff-format
+# .pre-commit-config.yaml
+repos:
+- repo: local
+  hooks:
+  - id: pytest-redaction
+    name: pytest (redaction smoke)
+    entry: pytest -q tests/test_redaction.py::test_redact_email_phone tests/test_redaction_tokens.py
+    language: system
+    pass_filenames: false
