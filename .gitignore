@@ -27,3 +27,5 @@ docs/*.txt
 docs/*.csv
 docs/preview/
 http/
+docs/*.md
+!docs/master_tracker.md
