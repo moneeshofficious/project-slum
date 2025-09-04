@@ -39,3 +39,5 @@
 - App boot + metrics exporter observed (M3, M18).
 - PII redaction & scope tests executed (M1, M4).
 - Alembic migration attempt error seen (M2) — not confirmed successful.
+
+- 2025-09-04: pytest 66 passed, 19 skipped.
