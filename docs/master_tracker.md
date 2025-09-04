@@ -43,5 +43,3 @@
 - 2025-09-04: pytest 66 passed, 19 skipped.
 - 2025-09-04: app boot ok; metrics on :9108.
 - 2025-09-04: alembic upgrade head ?
-- 2025-09-04: metrics exporter ? on :9108 (ENABLE_METRICS=true).
-- 2025-09-04: metrics flag parsing hardened; truthy set {1,true,on,yes}.
