@@ -20,3 +20,10 @@ htmlcov/
 # Local data / artifacts
 *.log
 app/safety/consent_store.json
+# SLUM snapshot noise
+.hypothesis/
+.all files/
+docs/*.txt
+docs/*.csv
+docs/preview/
+http/
