@@ -29,3 +29,7 @@ docs/preview/
 http/
 docs/*.md
 !docs/master_tracker.md
+# Local SQLite databases
+app/data/*.db
+app/data/*.sqlite
+app/data/*.sqlite3
