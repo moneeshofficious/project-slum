@@ -42,3 +42,4 @@
 
 - 2025-09-04: pytest 66 passed, 19 skipped.
 - 2025-09-04: app boot ok; metrics on :9108.
+- 2025-09-04: alembic upgrade head ?
